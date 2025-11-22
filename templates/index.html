@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚀 GitHub Repo AI分析师 - 专业版</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- 动态背景元素 -->
+    <div class="stars" id="stars"></div>
+    <div class="particles" id="particles"></div>
+    <div class="meteors" id="meteors"></div>
+
+    <div class="container">
+        <header class="glass">
+            <div class="header-content">
+                <h1>
+                    <i class="fas fa-rocket"></i>
+                    GitHub Repo AI分析师
+                </h1>
+                <p>🤖 智能分析GitHub仓库 · 📊 生成专业报告 · 🎯 深度技术洞察</p>
+                <div class="feature-tags">
+                    <span class="tag"><i class="fas fa-star"></i> AI驱动分析</span>
+                    <span class="tag"><i class="fas fa-chart-bar"></i> 数据可视化</span>
+                    <span class="tag"><i class="fas fa-mobile-alt"></i> 全平台支持</span>
+                    <span class="tag"><i class="fas fa-bolt"></i> 实时处理</span>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="input-section glass">
+                <div class="input-group">
+                    <input type="url" id="repoUrl" 
+                           placeholder="🌐 输入GitHub仓库链接，例如：https://github.com/vuejs/vue" 
+                           required>
+                </div>
+                <button id="analyzeBtn">
+                    <i class="fas fa-search"></i>
+                    开始智能分析
+                </button>
+            </section>
+
+            <section id="loading" class="loading glass hidden">
+                <div class="analyzing-animation">
+                    <div class="orbit"></div>
+                    <div class="orbit"></div>
+                    <div class="orbit"></div>
+                </div>
+                <h3>正在深度分析仓库...</h3>
+                <p id="loadingStatus">正在连接GitHub API...</p>
+                <button onclick="cancelAnalysis()" class="cancel-btn">
+                    <i class="fas fa-times"></i>
+                    取消分析
+                </button>
+            </section>
+
+            <section id="result" class="result glass hidden">
+                <!-- 分析结果将通过JavaScript动态填充 -->
+            </section>
+        </main>
+
+        <footer>
+            <p>
+                <i class="fas fa-code"></i>
+                由 AI 技术驱动 · 
+                <i class="fas fa-heart"></i>
+                为开发者打造 · 
+                <i class="fas fa-shield-alt"></i>
+                安全可靠
+            </p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/background.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
