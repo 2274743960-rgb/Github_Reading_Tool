@@ -1,6 +1,6 @@
 requests==2.31.0
 python-dotenv==1.0.0
 pygithub==1.55
-zhipuai==1.0.0
+zhipuai==2.1.5.20250825
 fpdf==1.7.2
 gunicorn==21.2.0
