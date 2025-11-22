@@ -1,5 +1,6 @@
 import os
 from dotenv import load_dotenv
+from zhipuai import ZhipuAI  # 确保正确导入
 
 load_dotenv()
 
@@ -10,7 +11,6 @@ class AIAnalyzer:
         
         # 使用新版本的ZhipuAI客户端
         try:
-            from zhipuai import ZhipuAI
             self.client = ZhipuAI(api_key=self.api_key)
             print("✅ AI分析器准备就绪！(使用新版本SDK)")
         except ImportError:
@@ -53,7 +53,7 @@ README内容: {readme_content[:1000]}  # 只取前1000字避免太长
         
         try:
             response = self.client.chat.completions.create(
-                model="glm-3-turbo",  # 使用GLM-3-Turbo模型
+                model="glm-4",  # 更新模型名称
                 messages=[{"role": "user", "content": prompt}],
                 top_p=0.7,
                 temperature=0.9,
