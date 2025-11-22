@@ -3,4 +3,4 @@ python-dotenv==1.0.0
 pygithub==1.55
 zhipuai==1.0.0
 fpdf==1.7.2
-gunicorn==21.2.
+gunicorn==21.2.0
